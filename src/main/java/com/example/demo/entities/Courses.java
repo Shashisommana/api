@@ -1,19 +1,23 @@
 package com.example.demo.entities;
 
+//import java.util.List;
+
 public class Courses {
 
 	private long id;
 	private String title;
 	private String info;
-	public Courses(long id, String title, String info) {
-		super();
+	private String Token;
+	public Courses(long id, String title, String info,boolean b) {
+
 		this.id = id;
 		this.title = title;
 		this.info = info;
+		this.Token = getToken();
 	}
 	public Courses() {
 		super();
-		// TODO Auto-generated constructor stub
+		
 	}
 	public long getId() {
 		return id;
@@ -33,10 +37,17 @@ public class Courses {
 	public void setInfo(String info) {
 		this.info = info;
 	}
+	public String getToken() {
+		return Token;
+	}
+	public void setToken(String token) {
+		Token = token;
+	}
 	@Override
 	public String toString() {
-		return "Courses [id=" + id + ", title=" + title + ", info=" + info + "]";
+		return "Courses [id=" + id + ", title=" + title + ", info=" + info + ", Token=" + Token + "]";
 	}
+	
 	
 	
 }
